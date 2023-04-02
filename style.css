@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.heading {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 40px;
+    background-color: rgb(231, 139, 0);
+}
+
+#textanimation{
+    width: 500px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#textstatic, #textdynamic {
+    width: 300px;
+    height: 50px;
+    padding: 3px;
+    font-size: 45px;
+    font-weight: 800;
+    color: rgb(70, 69, 69);
+    text-align: center;
+    margin-left: 850px;
+}
+
+#textdynamic {
+    background-color: rgb(26, 139, 26);
+    animation: textAniBg 4s linear infinite;
+}
+
+#textanimation > #textdynamic::before {
+    color: white;
+    content: "LIFESTYLE";
+    animation: textAni 4s linear infinite;
+}
+
+@keyframes textAni {
+    0% {
+        content: "LIFESTYLE";
+    }
+    50% {
+        content: "EVERYTHING";
+    }
+    100% {
+        content: "WORK";
+    }
+}
+
+@keyframes textAniBg {
+    0% {
+        background-color: rgb(0, 199, 0);
+    }
+    50% {
+        background-color: rgb(253, 0, 0);
+    }
+    75% {
+        background-color: rgb(192, 0, 192);
+    }
+    100% {
+        background-color: rgb(4, 154, 235);
+    }
+}
+
